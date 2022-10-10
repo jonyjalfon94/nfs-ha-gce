@@ -22,11 +22,11 @@ module "nfs_instance_template_1" {
 }
 
 module "test_instance" {
-  source            = "terraform-google-modules/vm/google//modules/umig"
-  project_id        = local.project_id
-  subnetwork        = module.gcp_network.subnets_names[0]
-  num_instances     = 1
-  hostname          = "test-instance"
-  instance_template = module.nfs_instance_template_1.self_link
-  region            = local.region
+  source             = "terraform-google-modules/vm/google//modules/compute_instance"
+  subnetwork_project = local.project_id
+  subnetwork         = module.gcp_network.subnets_names[0]
+  num_instances      = 1
+  hostname           = "test-instance"
+  instance_template  = module.nfs_instance_template_1.self_link
+  region             = local.region
 }
