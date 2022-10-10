@@ -29,13 +29,14 @@ module "nfs_instance_template" {
 }
 
 module "nfs_server" {
-  count              = var.nfs_server_count
-  source             = "terraform-google-modules/vm/google//modules/compute_instance"
-  subnetwork_project = var.project_id
-  subnetwork         = var.subnetwork
-  num_instances      = 1
-  hostname           = "${var.cluster_name}-nfs-server"
-  instance_template  = module.nfs_instance_template[count.index].self_link
-  region             = var.region
-  static_ips         = [var.static_ips[count.index]]
+  count               = var.nfs_server_count
+  source              = "terraform-google-modules/vm/google//modules/compute_instance"
+  subnetwork_project  = var.project_id
+  subnetwork          = var.subnetwork
+  add_hostname_suffix = false
+  num_instances       = 1
+  hostname            = "${var.cluster_name}-nfs-server-${count.index}"
+  instance_template   = module.nfs_instance_template[count.index].self_link
+  region              = var.region
+  static_ips          = [var.static_ips[count.index]]
 }
