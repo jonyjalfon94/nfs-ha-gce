@@ -2,6 +2,6 @@
 # data "google_client_config" "default" {}
 
 provider "google" {
-  project = "playground-s-11-9f32668d"
+  project = "playground-s-11-d2896fc3"
   region  = "us-central1"
 }
