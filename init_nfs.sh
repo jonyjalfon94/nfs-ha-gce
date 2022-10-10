@@ -1,5 +1,5 @@
 apt-get update -y
-apt-get install drbd-utils
+apt-get install drbd-utils -y
 cat > /etc/drbd.d/nfs01.res <<EOF
 resource nfs-vol01 {
  protocol C;
