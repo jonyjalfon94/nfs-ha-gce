@@ -45,7 +45,7 @@ resource "google_compute_firewall" "allow_nfs" {
     protocol = "tcp"
     ports    = ["2049"]
   }
-  source_ranges = ["192.168.0.0/18, 10.0.0.0/17"]
+  source_ranges = ["10.0.0.0/17"]
 }
 
 resource "google_compute_router" "router" {
