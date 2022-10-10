@@ -20,5 +20,5 @@ module "quorum_server" {
   hostname          = "${var.cluster_name}-nfs-quorum"
   instance_template = module.nfs_instance_template.self_link
   region            = var.region
-  static_ips        = [var.static_ips[3]]
+  static_ips        = [var.static_ips[2]]
 }
