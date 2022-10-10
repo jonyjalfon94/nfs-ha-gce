@@ -35,6 +35,7 @@ No resources.
 |------|-------------|------|---------|:--------:|
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | The name for the GKE cluster | `string` | `"demo"` | no |
 | <a name="input_disk_size_gb"></a> [disk\_size\_gb](#input\_disk\_size\_gb) | The size of the disk to attach to the nfs servers | `number` | `10` | no |
+| <a name="input_nfs_server_count"></a> [nfs\_server\_count](#input\_nfs\_server\_count) | The number of nfs servers to create | `number` | `2` | no |
 | <a name="input_project_id"></a> [project\_id](#input\_project\_id) | The project ID to host the cluster in | `any` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | The region to host the cluster in | `string` | `"us-central1"` | no |
 | <a name="input_static_ips"></a> [static\_ips](#input\_static\_ips) | The static ips to assign to the nfs server | `list(string)` | n/a | yes |

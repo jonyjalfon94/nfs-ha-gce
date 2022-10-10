@@ -26,3 +26,8 @@ variable "disk_size_gb" {
   description = "The size of the disk to attach to the nfs servers"
   default     = 10
 }
+
+variable "nfs_server_count" {
+  description = "The number of nfs servers to create"
+  default     = 2
+}
