@@ -15,7 +15,7 @@ module "nfs_instance_template_1" {
   source_image_project = "debian-cloud"
   subnetwork           = module.gcp_network.subnets_names[0]
   service_account = {
-    email  = module.service_accounts.email,
+    email  = module.service_accounts_1.email,
     scopes = []
   }
 }
