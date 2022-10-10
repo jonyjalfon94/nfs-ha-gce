@@ -8,11 +8,15 @@ module "nfs_instance_template" {
   subnetwork           = var.subnetwork
   additional_disks = [
     {
+      disk_name    = "nfs-data"
       disk_size_gb = 10
       disk_type    = "pd-ssd"
       auto_delete  = true
       boot         = false
       device_name  = "nfs-data"
+      disk_labels = {
+        name = "nfs-data"
+      }
     }
   ]
   service_account = {
