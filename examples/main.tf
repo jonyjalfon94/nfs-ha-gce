@@ -10,4 +10,5 @@ module "nfs_cluster" {
   cluster_name = "demo"
   region       = "us-central1"
   subnetwork   = module.gcp_network.subnets_names[0]
+  static_ips   = ["10.0.0.4", "10.0.0.5"]
 }

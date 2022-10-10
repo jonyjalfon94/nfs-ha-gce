@@ -25,8 +25,9 @@ module "nfs_server" {
   source            = "terraform-google-modules/vm/google//modules/umig"
   project_id        = var.project_id
   subnetwork        = var.subnetwork
-  num_instances     = 1
+  num_instances     = 2
   hostname          = "${var.cluster_name}-nfs-server"
   instance_template = module.nfs_instance_template.self_link
   region            = var.region
+  static_ips        = var.static_ips
 }

@@ -16,3 +16,8 @@ variable "subnetwork" {
   description = "The subnetwork created to host the cluster in"
   default     = "demo-subnet"
 }
+
+variable "static_ips" {
+  type        = string
+  description = "The static ips to assign to the nfs server"
+}
