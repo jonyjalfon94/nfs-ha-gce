@@ -23,7 +23,7 @@ No providers.
 | <a name="module_nfs_server"></a> [nfs\_server](#module\_nfs\_server) | terraform-google-modules/vm/google//modules/umig | n/a |
 | <a name="module_nfs_service_account"></a> [nfs\_service\_account](#module\_nfs\_service\_account) | terraform-google-modules/service-accounts/google | n/a |
 | <a name="module_quorum_instance_template"></a> [quorum\_instance\_template](#module\_quorum\_instance\_template) | terraform-google-modules/vm/google//modules/instance_template | n/a |
-| <a name="module_quorum_server"></a> [quorum\_server](#module\_quorum\_server) | terraform-google-modules/vm/google//modules/umig | n/a |
+| <a name="module_quorum_server"></a> [quorum\_server](#module\_quorum\_server) | terraform-google-modules/vm/google//modules/compute_instance | n/a |
 
 ## Resources
 
