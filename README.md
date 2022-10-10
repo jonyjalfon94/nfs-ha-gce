@@ -21,6 +21,8 @@ No providers.
 |------|--------|---------|
 | <a name="module_nfs_instance_template"></a> [nfs\_instance\_template](#module\_nfs\_instance\_template) | terraform-google-modules/vm/google//modules/instance_template | n/a |
 | <a name="module_nfs_server"></a> [nfs\_server](#module\_nfs\_server) | terraform-google-modules/vm/google//modules/umig | n/a |
+| <a name="module_quorum_instance_template"></a> [quorum\_instance\_template](#module\_quorum\_instance\_template) | terraform-google-modules/vm/google//modules/instance_template | n/a |
+| <a name="module_quorum_server"></a> [quorum\_server](#module\_quorum\_server) | terraform-google-modules/vm/google//modules/umig | n/a |
 | <a name="module_service_accounts"></a> [service\_accounts](#module\_service\_accounts) | terraform-google-modules/service-accounts/google | n/a |
 
 ## Resources
