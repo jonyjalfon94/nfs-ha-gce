@@ -1,5 +1,6 @@
 module "nfs_instance_template" {
   source               = "terraform-google-modules/vm/google//modules/instance_template"
+  name_prefix          = "nfs-server"
   region               = var.region
   project_id           = var.project_id
   startup_script       = file("${path.module}/init_nfs.sh")
