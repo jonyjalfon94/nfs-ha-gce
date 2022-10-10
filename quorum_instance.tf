@@ -7,7 +7,7 @@ module "quorum_instance_template" {
   source_image_project = "debian-cloud"
   subnetwork           = var.subnetwork
   service_account = {
-    email  = module.service_accounts.email,
+    email  = module.nfs_service_account.email,
     scopes = []
   }
 }
