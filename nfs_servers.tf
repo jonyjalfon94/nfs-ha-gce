@@ -11,8 +11,11 @@ module "nfs_instance_template" {
   additional_disks = [
     {
       disk_name    = "nfs-disk-${count.index}"
+      device_name  = "nfs-disk-${count.index}"
       disk_size_gb = var.disk_size_gb
       disk_type    = "pd-ssd"
+      auto_delete  = true
+      boot         = false
       device_name  = "nfs-disk"
     }
   ]
