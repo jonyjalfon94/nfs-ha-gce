@@ -10,6 +10,7 @@ module "service_accounts_1" {
 module "nfs_instance_template_1" {
   source               = "terraform-google-modules/vm/google//modules/instance_template"
   region               = local.region
+  project_id           = local.project_id
   startup_script       = file("${path.module}/test_instance.sh")
   source_image         = "debian-11"
   source_image_project = "debian-cloud"
