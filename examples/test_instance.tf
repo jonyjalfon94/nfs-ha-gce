@@ -26,6 +26,6 @@ module "test_instance" {
   subnetwork        = module.gcp_network.subnets_names[0]
   num_instances     = 1
   hostname          = "test-instance"
-  instance_template = module.nfs_instance_template.self_link
+  instance_template = module.nfs_instance_template_1.self_link
   region            = local.region
 }
