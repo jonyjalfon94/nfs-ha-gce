@@ -6,6 +6,15 @@ module "nfs_instance_template" {
   source_image         = "debian-11"
   source_image_project = "debian-cloud"
   subnetwork           = var.subnetwork
+  additional_disks = [
+    {
+      disk_size_gb = 10
+      disk_type    = "pd-ssd"
+      auto_delete  = true
+      boot         = false
+      device_name  = "nfs-data"
+    }
+  ]
   service_account = {
     email  = module.nfs_service_account.email,
     scopes = []
