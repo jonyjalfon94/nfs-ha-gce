@@ -4,7 +4,7 @@ variable "project_id" {
 
 variable "cluster_name" {
   description = "The name for the GKE cluster"
-  default     = "gke-on-vpc-cluster"
+  default     = "demo"
 }
 
 variable "region" {
@@ -14,5 +14,5 @@ variable "region" {
 
 variable "subnetwork" {
   description = "The subnetwork created to host the cluster in"
-  default     = "gke-subnet"
+  default     = "demo-subnet"
 }
