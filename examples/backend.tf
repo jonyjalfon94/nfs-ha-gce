@@ -1,7 +1,7 @@
 # Define GCS backend configuration 
 terraform {
   backend "gcs" {
-    bucket = "playground-s-11-d2896fc3"
+    bucket = "playground-s-11-f31135a1"
     prefix = "terraform/state"
   }
 }

@@ -1,12 +1,12 @@
 locals {
-  project_id = "playground-s-11-d2896fc3"
+  project_id = "playground-s-11-f31135a1"
   region     = "us-central1"
 }
 
 
 # module "nfs_cluster" {
 #   source       = "../"
-#   project_id   = "playground-s-11-d2896fc3"
+#   project_id   = local.project_id
 #   cluster_name = "demo"
 #   region       = "us-central1"
 #   subnetwork   = module.gcp_network.subnets_names[0]
