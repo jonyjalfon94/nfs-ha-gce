@@ -21,3 +21,8 @@ variable "static_ips" {
   type        = list(string)
   description = "The static ips to assign to the nfs server"
 }
+
+variable "disk_size_gb" {
+  description = "The size of the disk to attach to the nfs servers"
+  default     = 10
+}

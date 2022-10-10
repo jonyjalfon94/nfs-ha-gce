@@ -7,19 +7,8 @@ module "nfs_instance_template" {
   source_image         = "debian-11"
   source_image_project = "debian-cloud"
   subnetwork           = var.subnetwork
-  additional_disks = [
-    {
-      disk_name    = "nfs-data"
-      disk_size_gb = 10
-      disk_type    = "pd-ssd"
-      auto_delete  = true
-      boot         = false
-      device_name  = "nfs-data"
-      disk_labels = {
-        name = "nfs-data"
-      }
-    }
-  ]
+  disk_size_gb         = var.disk_size_gb
+  disk_type            = "pd-ssd"
   service_account = {
     email  = module.nfs_service_account.email,
     scopes = []
@@ -30,7 +19,7 @@ module "nfs_server" {
   source            = "terraform-google-modules/vm/google//modules/umig"
   project_id        = var.project_id
   subnetwork        = var.subnetwork
-  num_instances     = 2
+  num_instances     = 1
   hostname          = "${var.cluster_name}-nfs-server"
   instance_template = module.nfs_instance_template.self_link
   region            = var.region
