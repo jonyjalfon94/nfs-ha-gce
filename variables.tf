@@ -18,6 +18,6 @@ variable "subnetwork" {
 }
 
 variable "static_ips" {
-  type        = string
+  type        = list(string)
   description = "The static ips to assign to the nfs server"
 }
