@@ -32,7 +32,7 @@ module "gcp_network" {
 resource "google_compute_firewall" "allow_ssh" {
   project = local.project_id
   name    = "allow-ssh"
-  network = module.gcp_network.network.self_link
+  network = module.gcp_network.network.name
 
   allow {
     protocol = "tcp"
@@ -44,7 +44,7 @@ resource "google_compute_firewall" "allow_ssh" {
 resource "google_compute_firewall" "allow_nfs" {
   project = local.project_id
   name    = "allow-nfs"
-  network = module.gcp_network.network.self_link
+  network = module.gcp_network.network.name
 
   allow {
     protocol = "tcp"
@@ -56,7 +56,7 @@ resource "google_compute_firewall" "allow_nfs" {
 resource "google_compute_router" "router" {
   project = local.project_id
   name    = "nat-router"
-  network = module.gcp_network.network.self_link
+  network = module.gcp_network.network.name
   region  = local.region
 }
 
