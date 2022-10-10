@@ -35,7 +35,7 @@ module "nfs_server" {
   subnetwork         = var.subnetwork
   num_instances      = 1
   hostname           = "${var.cluster_name}-nfs-server"
-  instance_template  = module.nfs_instance_template.self_link
+  instance_template  = module.nfs_instance_template[count.index].self_link
   region             = var.region
   static_ips         = [var.static_ips[count.index]]
 }
