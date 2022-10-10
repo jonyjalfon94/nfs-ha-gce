@@ -1,3 +1,9 @@
+locals {
+  project_id = "playground-s-11-d2896fc3"
+  region     = "us-central1"
+}
+
+
 module "nfs_cluster" {
   source       = "../"
   project_id   = "playground-s-11-d2896fc3"

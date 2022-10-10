@@ -1,8 +1,3 @@
-locals {
-  project_id = "playground-s-11-d2896fc3"
-  region     = "us-central1"
-}
-
 module "gcp_network" {
   source  = "terraform-google-modules/network/google"
   version = ">= 4.0.1, < 5.0.0"
