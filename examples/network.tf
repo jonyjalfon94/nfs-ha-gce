@@ -48,6 +48,19 @@ resource "google_compute_firewall" "allow_nfs" {
   source_ranges = ["10.0.0.0/17"]
 }
 
+resource "google_compute_firewall" "allow_nfs" {
+  project = local.project_id
+  name    = "allow-drbd"
+  network = module.gcp_network.network_name
+
+  allow {
+    protocol = "tcp"
+    ports    = ["7790"]
+  }
+  source_ranges = ["10.0.0.0/17"]
+}
+
+
 resource "google_compute_router" "router" {
   project = local.project_id
   name    = "nat-router"
