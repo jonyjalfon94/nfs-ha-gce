@@ -17,6 +17,9 @@ module "nfs_instance_template" {
       auto_delete  = true
       boot         = false
       device_name  = "nfs-disk"
+      disk_labels = {
+        "nfs-disk" = "nfs-disk"
+      }
     }
   ]
   service_account = {
